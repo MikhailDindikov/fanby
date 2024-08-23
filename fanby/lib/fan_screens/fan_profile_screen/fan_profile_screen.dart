@@ -23,7 +23,7 @@ class _FanProfileScreenState extends State<FanProfileScreen> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Profile',
+          'Info',
           style: TextStyle(
             fontFamily: 'Mont',
             fontSize: 18,
@@ -134,7 +134,7 @@ class _FanProfileScreenState extends State<FanProfileScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 28),
                   child: Text(
-                    "In addition to the above information, we strongly advise you to consult a doctor. This application is not medical, but only helps to control and keep track of your health",
+                    "The application is not a medical reference book. It just helps control your health",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Mont',

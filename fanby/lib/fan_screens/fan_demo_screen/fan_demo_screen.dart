@@ -55,7 +55,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                   alignment: Alignment.topCenter,
                   child: Obx(
                     () => AnimatedOpacity(
-                      opacity: fanPage.value == 3 ? 1 : 0,
+                      opacity: fanPage.value == 4 ? 1 : 0,
                       duration: Duration(milliseconds: 300),
                       child: Image.asset(
                         'fan_assets/images/hello4.png',
@@ -68,7 +68,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                   alignment: Alignment.topCenter,
                   child: Obx(
                     () => AnimatedOpacity(
-                      opacity: fanPage.value == 4 ? 1 : 0,
+                      opacity: fanPage.value == 3 ? 1 : 0,
                       duration: Duration(milliseconds: 300),
                       child: Image.asset(
                         'fan_assets/images/photos.png',
@@ -427,6 +427,136 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Text(
+                                          'Set your photo',
+                                          style: TextStyle(
+                                            fontFamily: 'Mont',
+                                            fontSize: 18,
+                                            fontVariations: [
+                                              FontVariation('wght', 800)
+                                            ],
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 50,
+                                        ),
+                                        GestureDetector(
+                                          behavior: HitTestBehavior.opaque,
+                                          onTap: () async {
+                                            //final status = await Permission.photos.request();
+                                            final _imagePicker = ImagePicker();
+                                            XFile? singleMedia =
+                                                await _imagePicker.pickImage(
+                                                    source: ImageSource.camera);
+                                            if (singleMedia != null) {
+                                              await profileController
+                                                  .setProfImg(singleMedia);
+
+                                              fanCarousel.nextPage(
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.linear);
+                                              fanPageCont.nextPage(
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.linear);
+                                              fanPage.value++;
+                                            }
+                                          },
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                'fan_assets/images/camera.png',
+                                                height: 45,
+                                              ),
+                                              SizedBox(
+                                                width: 15,
+                                              ),
+                                              Expanded(
+                                                child: Text(
+                                                  "Camera",
+                                                  style: TextStyle(
+                                                    fontFamily: 'Mont',
+                                                    fontSize: 12,
+                                                    fontVariations: [
+                                                      FontVariation('wght', 400)
+                                                    ],
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                        GestureDetector(
+                                          behavior: HitTestBehavior.opaque,
+                                          onTap: () async {
+                                            //final status = await Permission.photos.request();
+                                            final _imagePicker = ImagePicker();
+                                            XFile? singleMedia =
+                                                await _imagePicker.pickImage(
+                                                    source:
+                                                        ImageSource.gallery);
+                                            if (singleMedia != null) {
+                                              await profileController
+                                                  .setProfImg(singleMedia);
+
+                                              fanCarousel.nextPage(
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.linear);
+                                              fanPageCont.nextPage(
+                                                  duration: Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.linear);
+                                              fanPage.value++;
+                                            }
+                                          },
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                'fan_assets/images/gallery.png',
+                                                height: 45,
+                                              ),
+                                              SizedBox(
+                                                width: 15,
+                                              ),
+                                              Expanded(
+                                                child: Text(
+                                                  "Gallery",
+                                                  style: TextStyle(
+                                                    fontFamily: 'Mont',
+                                                    fontSize: 12,
+                                                    fontVariations: [
+                                                      FontVariation('wght', 400)
+                                                    ],
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 50,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 32),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text(
                                           'This app will assist you in:',
                                           style: TextStyle(
                                             fontFamily: 'Mont',
@@ -497,121 +627,6 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                       ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 32),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Text(
-                                          'Set your photo',
-                                          style: TextStyle(
-                                            fontFamily: 'Mont',
-                                            fontSize: 18,
-                                            fontVariations: [
-                                              FontVariation('wght', 800)
-                                            ],
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 50,
-                                        ),
-                                        GestureDetector(
-                                          behavior: HitTestBehavior.opaque,
-                                          onTap: () async {
-                                            //final status = await Permission.photos.request();
-                                            final _imagePicker = ImagePicker();
-                                            XFile? singleMedia =
-                                                await _imagePicker.pickImage(
-                                                    source: ImageSource.camera);
-                                            if (singleMedia != null) {
-                                              await profileController
-                                                  .setProfImg(singleMedia);
-                                              Get.offAll(
-                                                  () => FanHelloScreen1());
-                                            }
-                                          },
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Image.asset(
-                                                'fan_assets/images/camera.png',
-                                                height: 45,
-                                              ),
-                                              SizedBox(
-                                                width: 15,
-                                              ),
-                                              Expanded(
-                                                child: Text(
-                                                  "Camera",
-                                                  style: TextStyle(
-                                                    fontFamily: 'Mont',
-                                                    fontSize: 12,
-                                                    fontVariations: [
-                                                      FontVariation('wght', 400)
-                                                    ],
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 15,
-                                        ),
-                                        GestureDetector(
-                                          behavior: HitTestBehavior.opaque,
-                                          onTap: () async {
-                                            //final status = await Permission.photos.request();
-                                            final _imagePicker = ImagePicker();
-                                            XFile? singleMedia =
-                                                await _imagePicker.pickImage(
-                                                    source:
-                                                        ImageSource.gallery);
-                                            if (singleMedia != null) {
-                                              await profileController
-                                                  .setProfImg(singleMedia);
-
-                                              Get.offAll(
-                                                  () => FanHelloScreen1());
-                                            }
-                                          },
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Image.asset(
-                                                'fan_assets/images/gallery.png',
-                                                height: 45,
-                                              ),
-                                              SizedBox(
-                                                width: 15,
-                                              ),
-                                              Expanded(
-                                                child: Text(
-                                                  "Gallery",
-                                                  style: TextStyle(
-                                                    fontFamily: 'Mont',
-                                                    fontSize: 12,
-                                                    fontVariations: [
-                                                      FontVariation('wght', 400)
-                                                    ],
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 50,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),
@@ -648,13 +663,12 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                     profileController.fanBirth =
                                         '${dateBith.value.day}.${dateBith.value.month}.${dateBith.value.year}';
                                   }
-                                  if (fanPage.value == 3) {
+                                  if (fanPage.value == 4) {
+                                    fanBox.write('showFanDemo', false);
+
                                     profileController.setProfInfo(
                                         profileController.fanName,
                                         profileController.fanBirth);
-                                  }
-                                  if (fanPage.value == 4) {
-                                    fanBox.write('showFanDemo', false);
                                     Get.offAll(() => FanHelloScreen1());
                                   }
                                   if (fanPage.value != 4) {

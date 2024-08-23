@@ -32,7 +32,7 @@ class _FanProfileEditScreenState extends State<FanProfileEditScreen> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Profile',
+          'Info',
           style: TextStyle(
             fontFamily: 'Mont',
             fontSize: 18,
