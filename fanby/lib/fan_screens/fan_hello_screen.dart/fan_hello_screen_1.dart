@@ -45,7 +45,7 @@ class _FanHelloScreen1State extends State<FanHelloScreen1> {
                             child: Padding(
                               padding: EdgeInsets.only(top: 30),
                               child: Text(
-                                'Welcome,\n${controller.fanName}!',
+                                'Welcome!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'Mont',

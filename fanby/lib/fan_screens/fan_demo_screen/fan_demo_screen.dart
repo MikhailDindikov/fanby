@@ -55,7 +55,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                   alignment: Alignment.topCenter,
                   child: Obx(
                     () => AnimatedOpacity(
-                      opacity: fanPage.value == 4 ? 1 : 0,
+                      opacity: fanPage.value == 3 ? 1 : 0,
                       duration: Duration(milliseconds: 300),
                       child: Image.asset(
                         'fan_assets/images/hello4.png',
@@ -68,7 +68,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                   alignment: Alignment.topCenter,
                   child: Obx(
                     () => AnimatedOpacity(
-                      opacity: fanPage.value == 3 ? 1 : 0,
+                      opacity: fanPage.value == 2 ? 1 : 0,
                       duration: Duration(milliseconds: 300),
                       child: Image.asset(
                         'fan_assets/images/photos.png',
@@ -84,7 +84,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                     ),
                     Obx(
                       () => Opacity(
-                        opacity: fanPage.value >= 3 ? 0 : 1,
+                        opacity: fanPage.value >= 2 ? 0 : 1,
                         child: IgnorePointer(
                           child: CarouselSlider.builder(
                             carouselController: fanCarousel,
@@ -181,24 +181,6 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        Obx(
-                          () => AnimatedContainer(
-                            duration: Duration(
-                              milliseconds: 300,
-                            ),
-                            height: 5,
-                            width: fanPage.value == 4 ? 31 : 5,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2.5),
-                              color: fanPage.value == 4
-                                  ? Colors.white
-                                  : Colors.white.withOpacity(0.6),
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                     SizedBox(
@@ -236,7 +218,8 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                         TextFormField(
                                           controller: fanName,
                                           decoration: InputDecoration(
-                                            hintText: 'Enter your name',
+                                            hintText:
+                                                "Enter your assistance's name",
                                             hintStyle: TextStyle(
                                               fontFamily: 'Mont',
                                               fontSize: 20,
@@ -282,79 +265,19 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 40),
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        SizedBox(
-                                          height: 45,
-                                        ),
-                                        Text(
-                                          'Welcome!',
-                                          style: TextStyle(
-                                            fontFamily: 'Mont',
-                                            fontSize: 36,
-                                            fontVariations: [
-                                              FontVariation('wght', 800)
-                                            ],
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Text(
-                                          'Select your birthday',
-                                          style: TextStyle(
-                                            fontFamily: 'Mont',
-                                            fontSize: 20,
-                                            fontVariations: [
-                                              FontVariation('wght', 700)
-                                            ],
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 45,
-                                        ),
-                                        Flexible(
-                                          child: Obx(
-                                            () => CupertinoDatePicker(
-                                              initialDateTime: dateBith.value,
-                                              mode:
-                                                  CupertinoDatePickerMode.date,
-                                              use24hFormat: true,
-                                              showDayOfWeek: false,
-                                              onDateTimeChanged:
-                                                  (DateTime newDate) {
-                                                dateBith.value = newDate;
-                                              },
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 45,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
                                         horizontal: 32),
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        Obx(
-                                          () => Text(
-                                            'Congratulations, ${fanVisName.value}!',
-                                            style: TextStyle(
-                                              fontFamily: 'Mont',
-                                              fontSize: 18,
-                                              fontVariations: [
-                                                FontVariation('wght', 800)
-                                              ],
-                                              color: Colors.black,
-                                            ),
+                                        Text(
+                                          'Congratulations!',
+                                          style: TextStyle(
+                                            fontFamily: 'Mont',
+                                            fontSize: 18,
+                                            fontVariations: [
+                                              FontVariation('wght', 800)
+                                            ],
+                                            color: Colors.black,
                                           ),
                                         ),
                                         SizedBox(
@@ -427,7 +350,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Text(
-                                          'Set your photo',
+                                          "Set your assistance's photo",
                                           style: TextStyle(
                                             fontFamily: 'Mont',
                                             fontSize: 18,
@@ -659,11 +582,11 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                       return;
                                     }
                                   }
-                                  if (fanPage.value == 1) {
+                                  if (fanPage.value == 111) {
                                     profileController.fanBirth =
                                         '${dateBith.value.day}.${dateBith.value.month}.${dateBith.value.year}';
                                   }
-                                  if (fanPage.value == 4) {
+                                  if (fanPage.value == 3) {
                                     fanBox.write('showFanDemo', false);
 
                                     profileController.setProfInfo(
@@ -671,7 +594,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                         profileController.fanBirth);
                                     Get.offAll(() => FanHelloScreen1());
                                   }
-                                  if (fanPage.value != 4) {
+                                  if (fanPage.value != 3) {
                                     fanCarousel.nextPage(
                                         duration: Duration(milliseconds: 300),
                                         curve: Curves.linear);
