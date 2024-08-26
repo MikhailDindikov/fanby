@@ -195,6 +195,37 @@ class _FanPremScreenState extends State<FanPremScreen> {
                                     );
                                     if (fanananafna.error == null) {
                                       await profileController.setProfPrem();
+                                      Get.showSnackbar(GetSnackBar(
+                                        duration: Duration(milliseconds: 1500),
+                                        messageText: Text(
+                                          'Premium activated',
+                                          style: TextStyle(
+                                            fontFamily: 'Mont',
+                                            fontSize: 18,
+                                            fontVariations: [
+                                              FontVariation('wght', 800)
+                                            ],
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        backgroundColor: Colors.white,
+                                      ));
+                                    } else {
+                                      Get.showSnackbar(GetSnackBar(
+                                        duration: Duration(milliseconds: 1500),
+                                        messageText: Text(
+                                          'Some error happens',
+                                          style: TextStyle(
+                                            fontFamily: 'Mont',
+                                            fontSize: 18,
+                                            fontVariations: [
+                                              FontVariation('wght', 800)
+                                            ],
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        backgroundColor: Colors.white,
+                                      ));
                                     }
 
                                     fanBuy.value = false;

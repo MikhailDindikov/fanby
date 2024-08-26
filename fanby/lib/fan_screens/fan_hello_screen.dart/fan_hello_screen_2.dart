@@ -10,6 +10,7 @@ class FanHelloScreen2 extends StatelessWidget {
   int fandaysBetween(DateTime from, DateTime to) {
     from = DateTime(from.year, from.month, from.day);
     to = DateTime(to.year, to.month, to.day);
+    print((to.difference(from).inHours / 24));
     return (to.difference(from).inHours / 24).round();
   }
 
@@ -171,12 +172,18 @@ class FanHelloScreen2 extends StatelessWidget {
                     if (checkController.lastCheck == null ||
                         (checkController.lastCheck != null &&
                             fandaysBetween(
-                                    checkController.lastCheck!,
-                                    DateTime(
-                                        checkController.lastCheck!.year,
-                                        checkController.lastCheck!.month + 1,
-                                        checkController.lastCheck!.day)) <=
-                                0))
+                                    DateTime.now(),
+                                    controller.fanPrem
+                                        ? DateTime(
+                                            checkController.lastCheck!.year,
+                                            checkController.lastCheck!.month,
+                                            checkController.lastCheck!.day + 1)
+                                        : DateTime(
+                                            checkController.lastCheck!.year,
+                                            checkController.lastCheck!.month +
+                                                1,
+                                            checkController.lastCheck!.day)) <=
+                                0.01))
                       IntrinsicWidth(
                         child: GestureDetector(
                           onTap: () {
@@ -235,7 +242,7 @@ class FanHelloScreen2 extends StatelessWidget {
                                                 1,
                                             checkController.lastCheck!.day);
                                 return Text(
-                                  'NEXT CHECK IN ${fandaysBetween(checkController.lastCheck!, DateTime(checkController.lastCheck!.year, checkController.lastCheck!.month + 1, checkController.lastCheck!.day))} DAYS',
+                                  'NEXT CHECK IN ${fandaysBetween(DateTime.now(), controller.fanPrem ? DateTime(checkController.lastCheck!.year, checkController.lastCheck!.month, checkController.lastCheck!.day + 1) : DateTime(checkController.lastCheck!.year, checkController.lastCheck!.month + 1, checkController.lastCheck!.day))} DAY(S)',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: 'Mont',
