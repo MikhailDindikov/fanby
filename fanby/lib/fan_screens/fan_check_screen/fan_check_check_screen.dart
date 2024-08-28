@@ -151,6 +151,9 @@ class _FanCheckCheckScreenState extends State<FanCheckCheckScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(
+                                height: 10,
+                              ),
                               Text(
                                 'DON’T FORGET TO CHECK YOUR NIPPLES',
                                 textAlign: TextAlign.center,
@@ -175,7 +178,7 @@ class _FanCheckCheckScreenState extends State<FanCheckCheckScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 3,
                               ),
                               Text(
                                 "If you notice any discharge or feel any pain, it’s important to consult a doctor as soon as possible",
@@ -188,7 +191,7 @@ class _FanCheckCheckScreenState extends State<FanCheckCheckScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 23,
+                                height: 15,
                               ),
                               IntrinsicWidth(
                                 child: GestureDetector(
@@ -197,7 +200,7 @@ class _FanCheckCheckScreenState extends State<FanCheckCheckScreen> {
                                   },
                                   child: Container(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 10.5, horizontal: 75),
+                                        vertical: 8.5, horizontal: 75),
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
@@ -215,7 +218,7 @@ class _FanCheckCheckScreenState extends State<FanCheckCheckScreen> {
                                       'NEXT',
                                       style: TextStyle(
                                         fontFamily: 'Mont',
-                                        fontSize: 20,
+                                        fontSize: 16,
                                         fontVariations: [
                                           FontVariation('wght', 700)
                                         ],
@@ -226,7 +229,7 @@ class _FanCheckCheckScreenState extends State<FanCheckCheckScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 10,
                               ),
                             ],
                           ),

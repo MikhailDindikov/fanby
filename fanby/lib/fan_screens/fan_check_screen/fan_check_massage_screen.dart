@@ -150,6 +150,9 @@ class _FanCheckMassageScreenState extends State<FanCheckMassageScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(
+                                height: 10,
+                              ),
                               Text(
                                 'MESSAGE',
                                 style: TextStyle(
@@ -160,7 +163,7 @@ class _FanCheckMassageScreenState extends State<FanCheckMassageScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 23,
+                                height: 15,
                               ),
                               Text(
                                 "Next, while still looking in the mirror, place one hand behind your head",
@@ -173,7 +176,7 @@ class _FanCheckMassageScreenState extends State<FanCheckMassageScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 3,
                               ),
                               Text(
                                 "Using three fingers on the other hand, gently examine your breast/chest for anything that feels unusual",
@@ -186,7 +189,7 @@ class _FanCheckMassageScreenState extends State<FanCheckMassageScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 3,
                               ),
                               Text(
                                 "Then, switch sides and repeat the process",
@@ -208,7 +211,7 @@ class _FanCheckMassageScreenState extends State<FanCheckMassageScreen> {
                                   },
                                   child: Container(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 10.5, horizontal: 75),
+                                        vertical: 8.5, horizontal: 75),
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
@@ -226,7 +229,7 @@ class _FanCheckMassageScreenState extends State<FanCheckMassageScreen> {
                                       'NEXT',
                                       style: TextStyle(
                                         fontFamily: 'Mont',
-                                        fontSize: 20,
+                                        fontSize: 16,
                                         fontVariations: [
                                           FontVariation('wght', 700)
                                         ],
@@ -237,7 +240,7 @@ class _FanCheckMassageScreenState extends State<FanCheckMassageScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 10,
                               ),
                             ],
                           ),

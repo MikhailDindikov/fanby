@@ -150,8 +150,12 @@ class _FanCheckUpScreenState extends State<FanCheckUpScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(
+                                height: 12,
+                              ),
                               Text(
                                 'UP & DOWN AND ALL AROUND',
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'Mont',
                                   fontSize: 18,
@@ -160,7 +164,7 @@ class _FanCheckUpScreenState extends State<FanCheckUpScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 23,
+                                height: 12,
                               ),
                               Text(
                                 "Move your three fingers in small circles, gradually increasing the pressure from light to medium, and then firm",
@@ -173,7 +177,7 @@ class _FanCheckUpScreenState extends State<FanCheckUpScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 2,
                               ),
                               Text(
                                 "As you move to the next area, walk your fingers across your chest without lifting them",
@@ -186,7 +190,7 @@ class _FanCheckUpScreenState extends State<FanCheckUpScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 23,
+                                height: 15,
                               ),
                               IntrinsicWidth(
                                 child: GestureDetector(
@@ -195,7 +199,7 @@ class _FanCheckUpScreenState extends State<FanCheckUpScreen> {
                                   },
                                   child: Container(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 10.5, horizontal: 75),
+                                        vertical: 8.5, horizontal: 75),
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
@@ -213,7 +217,7 @@ class _FanCheckUpScreenState extends State<FanCheckUpScreen> {
                                       'NEXT',
                                       style: TextStyle(
                                         fontFamily: 'Mont',
-                                        fontSize: 20,
+                                        fontSize: 16,
                                         fontVariations: [
                                           FontVariation('wght', 700)
                                         ],
@@ -224,7 +228,7 @@ class _FanCheckUpScreenState extends State<FanCheckUpScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 10,
                               ),
                             ],
                           ),

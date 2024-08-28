@@ -72,7 +72,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                       duration: Duration(milliseconds: 300),
                       child: Image.asset(
                         'fan_assets/images/photos.png',
-                        height: 300,
+                        height: 260,
                       ),
                     ),
                   ),
@@ -351,6 +351,7 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                       children: [
                                         Text(
                                           "Set your assistance's photo",
+                                          textAlign: TextAlign.center,
                                           style: TextStyle(
                                             fontFamily: 'Mont',
                                             fontSize: 18,
@@ -362,59 +363,6 @@ class _FanDemoScreenState extends State<FanDemoScreen> {
                                         ),
                                         SizedBox(
                                           height: 50,
-                                        ),
-                                        GestureDetector(
-                                          behavior: HitTestBehavior.opaque,
-                                          onTap: () async {
-                                            //final status = await Permission.photos.request();
-                                            final _imagePicker = ImagePicker();
-                                            XFile? singleMedia =
-                                                await _imagePicker.pickImage(
-                                                    source: ImageSource.camera);
-                                            if (singleMedia != null) {
-                                              await profileController
-                                                  .setProfImg(singleMedia);
-
-                                              fanCarousel.nextPage(
-                                                  duration: Duration(
-                                                      milliseconds: 300),
-                                                  curve: Curves.linear);
-                                              fanPageCont.nextPage(
-                                                  duration: Duration(
-                                                      milliseconds: 300),
-                                                  curve: Curves.linear);
-                                              fanPage.value++;
-                                            }
-                                          },
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Image.asset(
-                                                'fan_assets/images/camera.png',
-                                                height: 45,
-                                              ),
-                                              SizedBox(
-                                                width: 15,
-                                              ),
-                                              Expanded(
-                                                child: Text(
-                                                  "Camera",
-                                                  style: TextStyle(
-                                                    fontFamily: 'Mont',
-                                                    fontSize: 12,
-                                                    fontVariations: [
-                                                      FontVariation('wght', 400)
-                                                    ],
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 15,
                                         ),
                                         GestureDetector(
                                           behavior: HitTestBehavior.opaque,

@@ -178,20 +178,15 @@ class _FanPremScreenState extends State<FanPremScreen> {
                                   if (!fanBuy.value) {
                                     fanBuy.value = true;
                                     final fanwwwwwwa = await Apphud.paywalls();
+                                    var jgjkfkj = fanwwwwwwa
+                                        ?.paywalls.first.products!.first;
                                     print(fanwwwwwwa?.paywalls.first.products!
                                         .where((element) =>
                                             element.productId == 'premium')
                                         .toList()
                                         .first);
-
                                     final fanananafna = await Apphud.purchase(
-                                      product: fanwwwwwwa
-                                          ?.paywalls.first.products!
-                                          .where((fodpofdopfd) =>
-                                              fodpofdopfd.productId ==
-                                              'premium')
-                                          .toList()
-                                          .first,
+                                      product: jgjkfkj,
                                     );
                                     if (fanananafna.error == null) {
                                       await profileController.setProfPrem();

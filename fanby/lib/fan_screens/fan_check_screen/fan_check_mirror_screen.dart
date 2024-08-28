@@ -150,6 +150,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(height: 10,),
                               Text(
                                 'MIRROR MIRROR',
                                 style: TextStyle(
@@ -160,7 +161,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 23,
+                                height: 16,
                               ),
                               Text(
                                 "Stand in front of a mirror and examine your chest",
@@ -173,7 +174,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 3,
                               ),
                               Text(
                                 "Raise your hands above your head, then place them on your hips",
@@ -186,7 +187,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 3,
                               ),
                               Text(
                                 "Move around to view every part of your chest, including your side profile and the area directly underneath your breasts",
@@ -199,7 +200,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 23,
+                                height: 15,
                               ),
                               IntrinsicWidth(
                                 child: GestureDetector(
@@ -208,7 +209,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                                   },
                                   child: Container(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 10.5, horizontal: 75),
+                                        vertical: 8.5, horizontal: 75),
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
@@ -226,7 +227,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                                       'NEXT',
                                       style: TextStyle(
                                         fontFamily: 'Mont',
-                                        fontSize: 20,
+                                        fontSize: 16,
                                         fontVariations: [
                                           FontVariation('wght', 700)
                                         ],
@@ -237,7 +238,7 @@ class _FanCheckMirrorScreenState extends State<FanCheckMirrorScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 10,
                               ),
                             ],
                           ),

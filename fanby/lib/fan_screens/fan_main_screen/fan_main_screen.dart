@@ -87,6 +87,22 @@ class _FanMainScreenState extends State<FanMainScreen> {
                     )),
               ),
             ),
+            // GestureDetector(
+            //   behavior: HitTestBehavior.opaque,
+            //   onTap: () {
+            //     fanPage.value = 2;
+            //   },
+            //   child: Container(
+            //     height: 24,
+            //     width: 24,
+            //     alignment: Alignment.center,
+            //     child: Obx(() => SvgPicture.asset(
+            //           fanPage.value == 2
+            //               ? 'fan_assets/icons/prem_sel.svg'
+            //               : 'fan_assets/icons/prem.svg',
+            //         )),
+            //   ),
+            // ),
             GestureDetector(
               behavior: HitTestBehavior.opaque,
               onTap: () {
@@ -98,8 +114,8 @@ class _FanMainScreenState extends State<FanMainScreen> {
                 alignment: Alignment.center,
                 child: Obx(() => SvgPicture.asset(
                       fanPage.value == 2
-                          ? 'fan_assets/icons/prem_sel.svg'
-                          : 'fan_assets/icons/prem.svg',
+                          ? 'fan_assets/icons/profile_sel.svg'
+                          : 'fan_assets/icons/profile.svg',
                     )),
               ),
             ),
@@ -114,22 +130,6 @@ class _FanMainScreenState extends State<FanMainScreen> {
                 alignment: Alignment.center,
                 child: Obx(() => SvgPicture.asset(
                       fanPage.value == 3
-                          ? 'fan_assets/icons/profile_sel.svg'
-                          : 'fan_assets/icons/profile.svg',
-                    )),
-              ),
-            ),
-            GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onTap: () {
-                fanPage.value = 4;
-              },
-              child: Container(
-                height: 24,
-                width: 24,
-                alignment: Alignment.center,
-                child: Obx(() => SvgPicture.asset(
-                      fanPage.value == 4
                           ? 'fan_assets/icons/settings_sel.svg'
                           : 'fan_assets/icons/settings.svg',
                     )),
@@ -144,7 +144,7 @@ class _FanMainScreenState extends State<FanMainScreen> {
           children: [
             FanCheckNavigator(),
             FanCalendarScreen(),
-            FanPremScreen(),
+            //FanPremScreen(),
             FanProfileNavigator(),
             FanSettingsScreen(),
           ],

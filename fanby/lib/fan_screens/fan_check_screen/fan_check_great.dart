@@ -42,48 +42,51 @@ class _FanCheckGreatScreenState extends State<FanCheckGreatScreen> {
                   child: SafeArea(
                     child: TopRoundContainer(
                       child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 28),
+                        padding: EdgeInsets.symmetric(horizontal: 8),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            SizedBox(
+                              height: 10,
+                            ),
                             Text(
                               'Great job!',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontFamily: 'Mont',
-                                fontSize: 18,
+                                fontSize: 14,
                                 fontVariations: [FontVariation('wght', 800)],
                                 color: Colors.black,
                               ),
                             ),
                             SizedBox(
-                              height: 15,
+                              height: 8,
                             ),
                             Text(
                               'Take a deep breath',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontFamily: 'Mont',
-                                fontSize: 18,
+                                fontSize: 14,
                                 fontVariations: [FontVariation('wght', 800)],
                                 color: Colors.black,
                               ),
                             ),
                             SizedBox(
-                              height: 15,
+                              height: 4,
                             ),
                             Text(
                               'If you find something strange, schedule an appointment with your doctor',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontFamily: 'Mont',
-                                fontSize: 18,
+                                fontSize: 14,
                                 fontVariations: [FontVariation('wght', 800)],
                                 color: Colors.black,
                               ),
                             ),
                             SizedBox(
-                              height: 28,
+                              height: 15,
                             ),
                             Text(
                               "WARNING!",
@@ -118,7 +121,7 @@ class _FanCheckGreatScreenState extends State<FanCheckGreatScreen> {
                                 },
                                 child: Container(
                                   padding: EdgeInsets.symmetric(
-                                      vertical: 10.5, horizontal: 75),
+                                      vertical: 8.5, horizontal: 75),
                                   alignment: Alignment.center,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16),
@@ -136,13 +139,13 @@ class _FanCheckGreatScreenState extends State<FanCheckGreatScreen> {
                                     children: [
                                       Image.asset(
                                         'fan_assets/images/active.png',
-                                        height: 30,
+                                        height: 20,
                                       ),
                                       Text(
                                         'DONE',
                                         style: TextStyle(
                                           fontFamily: 'Mont',
-                                          fontSize: 20,
+                                          fontSize: 16,
                                           fontVariations: [
                                             FontVariation('wght', 700)
                                           ],
@@ -155,7 +158,7 @@ class _FanCheckGreatScreenState extends State<FanCheckGreatScreen> {
                               ),
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 10,
                             ),
                           ],
                         ),
