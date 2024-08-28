@@ -120,32 +120,6 @@ class _FanProfileEditScreenState extends State<FanProfileEditScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    controller: fanBirth,
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.black)),
-                      errorBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.black)),
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.black)),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.black)),
-                      disabledBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.black)),
-                      focusedErrorBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(width: 1, color: Colors.black)),
-                    ),
-                  ),
-                  SizedBox(
                     height: 50,
                   ),
                   IntrinsicWidth(

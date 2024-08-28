@@ -70,19 +70,7 @@ class _FanProfileScreenState extends State<FanProfileScreen> {
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    profileController.fanBirth,
-                    style: TextStyle(
-                      fontFamily: 'Mont',
-                      fontSize: 16,
-                      fontVariations: [FontVariation('wght', 800)],
-                      color: Colors.black,
-                    ),
-                  ),
-                  SizedBox(
+               SizedBox(
                     height: 50,
                   ),
                   IntrinsicWidth(

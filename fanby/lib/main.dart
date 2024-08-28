@@ -1,4 +1,4 @@
-import 'package:apphud/apphud.dart';
+
 import 'package:fanby/fan_controllers/fan_binds.dart';
 import 'package:fanby/fan_screens/fan_demo_screen/fan_demo_screen.dart';
 import 'package:fanby/fan_screens/fan_hello_screen.dart/fan_hello_screen_1.dart';
@@ -14,7 +14,6 @@ Future<void> main() async {
 
   final fanBox = GetStorage();
   final showFanDemo = fanBox.read<bool?>('showFanDemo') ?? true;
-  await Apphud.start(apiKey: 'app_Qrcbf3MjSg93z1i9dYPg5kDszvizwh');
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp( FanbyApp(showFandemo: showFanDemo,));
 }

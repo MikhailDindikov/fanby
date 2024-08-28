@@ -2,8 +2,6 @@ import 'package:fanby/fan_check_navigator.dart';
 import 'package:fanby/fan_controllers/fan_check_controller.dart';
 import 'package:fanby/fan_controllers/fan_profile_controller.dart';
 import 'package:fanby/fan_screens/fan_calendar_screen/fan_calendar_screen.dart';
-import 'package:fanby/fan_screens/fan_prem_screen.dart/fan_prem_screen.dart';
-import 'package:fanby/fan_screens/fan_profile_screen/fan_profile_screen.dart';
 import 'package:fanby/fan_screens/fan_settings_screen/fan_settings_screen.dart';
 import 'package:fanby/fan_some/fan_profile_navigator.dart';
 import 'package:flutter/material.dart';
@@ -87,22 +85,6 @@ class _FanMainScreenState extends State<FanMainScreen> {
                     )),
               ),
             ),
-            // GestureDetector(
-            //   behavior: HitTestBehavior.opaque,
-            //   onTap: () {
-            //     fanPage.value = 2;
-            //   },
-            //   child: Container(
-            //     height: 24,
-            //     width: 24,
-            //     alignment: Alignment.center,
-            //     child: Obx(() => SvgPicture.asset(
-            //           fanPage.value == 2
-            //               ? 'fan_assets/icons/prem_sel.svg'
-            //               : 'fan_assets/icons/prem.svg',
-            //         )),
-            //   ),
-            // ),
             GestureDetector(
               behavior: HitTestBehavior.opaque,
               onTap: () {
